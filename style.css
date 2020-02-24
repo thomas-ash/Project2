@@ -177,7 +177,6 @@ img {
         flex: 1;
     }
 
-
 }
 
 @media (min-width: 1024px) {
@@ -194,10 +193,6 @@ img {
     main section {
         flex-wrap: wrap;
     }
-
-
-
-
 
 }
 
