@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+.header1 {
+    background-color: grey;
+    padding: 30px 20px;
+} 
+
+.pagetitle {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+.navlinks li {
+    display: inline-block;
+    list-style: none;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+.navlinks li a {
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+    transition: all 0.3s ease 0s;
+}
+.navlinks a:hover {
+    color: violet;
+}
+
+h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: grey;
+    margin-top: 40px;
+    padding: 20px 20px;
+    
+}
+
+body {
+    background-color: silver;
+    width: 80%
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- media queries --- */
+
+@media (min-width: 320px) {
+
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header1,
+    .pagetitle,
+    .maincolumns,
+    .firstrow,
+    .secondrow,
+    footer {
+        display: flex;
+      
+    }
+
+    .header1, 
+    .pagetitle,
+    .maincolumns,
+    .firstrow,
+    .secondrow,
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .maincolumns div {
+        padding: 60px;
+        text-align: center;
+        flex: 1;
+    }
+
+    footer p {
+        text-align: center;
+        justify-content: center;
+        padding: 5px 0;
+    }
+    
+
+    .pagetitle {
+        padding: 20px 0;
+    }
+
+    .firstrow div,
+    .secondrow div,
+    .thirdrow div {
+        padding: 40px;
+    }
+
+    .firstrow div p,
+    .secondrow div p,
+    .thirdrow div p {
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    body {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .firstrow div p,
+    .secondrow div p,
+    .thirdrow div p {
+        text-align: center;
+    }
+
+    .header1,
+    .pagetitle,
+    .maincolumns,
+    .firstrow,
+    .secondrow,
+    .thirdrow,
+    footer {
+        display: flex;
+    }
+
+    .header1, 
+    .pagetitle,
+    .maincolumns,
+    .firstrow,
+    .secondrow,
+    .thirdrow,
+    footer  {
+        flex-direction: row;
+    }
+
+    .header1, 
+    .maincolumns,
+    .firstrow,
+    .secondrow,
+    .thirdrow,
+    footer {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .maincolumns div {
+        align-self: center;
+        padding: 60px 30px;
+        flex: 1;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+
+    body {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    main {
+        display: flex
+    }
+
+    main section {
+        flex-wrap: wrap;
+    }
+
+
+
+
+
+}
+
+
