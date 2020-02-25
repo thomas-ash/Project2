@@ -8,19 +8,18 @@
 
 .header1 {
     background-color: grey;
-    padding: 30px 20px;
+    padding: 20px 20px;
 } 
 
-.pagetitle {
+.pagetitle,
+.titlefooter {
     font-family: 'Quicksand', sans-serif;
     color: white;
     text-transform: uppercase;
-    padding-left: 40px;
     cursor: pointer;
 }
 
 .navlinks li {
-    display: inline-block;
     list-style: none;
     text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
@@ -76,41 +75,65 @@ img {
         margin: 0 auto;
     }
 
-    .header1,
-    .pagetitle,
-    .maincolumns,
-    .firstrow,
-    .secondrow,
-    footer {
-        display: flex;
-      
+    .hide {
+        display: none;
     }
 
-    .header1, 
+    .header1,
+    .topnav ul,
     .pagetitle,
     .maincolumns,
     .firstrow,
     .secondrow,
-    footer {
+    .bottom,
+    footer,
+    .titlefooter {
+        display: flex;
+    }
+
+    footer,
+    .titlefooter {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer,
+    .titlefooter {
+        flex: 1;
+    }
+
+    .titlefooter {
+        margin-right: auto;
+    }
+
+    .header1,
+    .topnav ul, 
+    .pagetitle,
+    .maincolumns,
+    .firstrow,
+    .secondrow,
+    .bottom {
         flex-direction: column;
         align-items: center;
     }
 
-    .maincolumns div {
-        padding: 60px;
-        text-align: center;
-        flex: 1;
+    .topnav ul {
+        flex-wrap: wrap;
     }
 
-    footer p {
+    .topnav ul li {
+        padding: 10px;
+    }
+
+    .maincolumns div {
+        padding: 40px;
         text-align: center;
-        justify-content: center;
-        padding: 5px 0;
+        flex: 1;
     }
     
 
     .pagetitle {
-        padding: 20px 0;
+        padding-bottom: 10px;
     }
 
     .firstrow div,
@@ -119,11 +142,17 @@ img {
         padding: 40px;
     }
 
+    .bottom p {
+        padding: 10px;
+    }
+
     .firstrow div p,
     .secondrow div p,
-    .thirdrow div p {
+    .thirdrow div p,
+    .bottom {
         text-align: center;
     }
+
 
 }
 
@@ -142,17 +171,24 @@ img {
     }
 
     .header1,
+    .topnav ul,
     .pagetitle,
     .maincolumns,
     .firstrow,
     .secondrow,
     .thirdrow,
+    .bottom
     footer {
         display: flex;
     }
 
     .header1, 
     .pagetitle,
+    .bottom {
+        flex-direction: column;
+    }
+
+    .topnav ul,
     .maincolumns,
     .firstrow,
     .secondrow,
@@ -161,6 +197,7 @@ img {
         flex-direction: row;
     }
 
+    .topnav ul,
     .header1, 
     .maincolumns,
     .firstrow,
@@ -177,21 +214,44 @@ img {
         flex: 1;
     }
 
+    .pagetitle {
+        padding-bottom: 10px;
+    }
+
+    .navlinks li {
+        display: inline-block;
+    }
+
 }
 
 @media (min-width: 1024px) {
 
     body {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
 
+    .header1,
+    .pagetitle,
     main {
         display: flex
     }
 
+    .header1,
+    .pagetitle {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .pagetitle {
+        padding: 0px;
+    }
+
     main section {
         flex-wrap: wrap;
+    }
+
+    .navlinks li {
+        display: inline-block;
     }
 
 }
